@@ -1,4 +1,4 @@
-import { debugNodeToString } from "../..";
+import { debugNodeToString } from "../utils";
 import { generate, getNpcOptionsValues } from "../generate";
 
 describe("generate", () => {
