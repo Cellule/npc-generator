@@ -1,0 +1,38 @@
+{
+  "name": "npc-generator",
+  "version": "1.0.0",
+  "description": "Generator of randomized Non-Player Characters (NPCs) with attributes, in-depth and unique descriptions as well as a plot hook",
+  "keywords": [
+    "npc",
+    "generator"
+  ],
+  "homepage": "https://www.npcgenerator.com",
+  "contributors": [
+    {
+      "name": "Michael Ferris"
+    },
+    {
+      "name": "Étienne Ponton-Bouchard"
+    }
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "mocha -r ./mocha-setup src/**/*.spec.ts",
+    "gen": "node scripts/gen.js",
+    "clean": "rm -rf dist",
+    "build": "npm run gen & npm run clean & tsc"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.3",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^16.11.12",
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "prettier": "^2.7.1",
+    "prettier-plugin-organize-imports": "^3.1.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.2"
+  }
+}
