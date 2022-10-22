@@ -18,7 +18,7 @@ export interface NpcGenerateOptionsValues {
   plothooks: GenerateOptionValueSimple;
   professions: Array<{
     name: string;
-    professionCategories: GenerateOptionValueSimple | undefined;
+    professionCategories: GenerateOptionValueSimple;
   }>;
   races: Array<{
     name: string;
@@ -91,6 +91,6 @@ export interface NpcAbilities {
   cha: number;
 }
 
-export function generate(options: { npcOptions?: NpcGenerateOptions }): NpcGenerateResult;
+export function generate(options?: { npcOptions?: NpcGenerateOptions }): NpcGenerateResult;
 export function getNpcOptionsValues(): NpcGenerateOptionsValues;
 export function printDebugGen(debugNode: DebugNode | undefined): void;

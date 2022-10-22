@@ -8,12 +8,15 @@
       "label": "tsc",
       "tsconfig": "tsconfig.json",
       "option": "watch",
-      "problemMatcher": [
-        "$tsc-watch"
-      ],
+      "problemMatcher": ["$tsc-watch"],
       "runOptions": {
         "runOn": "folderOpen"
       }
+    },
+    {
+      "type": "npm",
+      "script": "test-watch",
+      "problemMatcher": []
     }
   ]
 }

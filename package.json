@@ -20,15 +20,18 @@
   "types": "index.d.ts",
   "scripts": {
     "test": "mocha -r ./mocha-setup src/**/*.spec.ts",
+    "test-watch": "npm test -- --watch --watch-files src/**/*.ts",
     "gen": "node scripts/gen.js",
     "clean": "rm -rf dist",
     "build": "npm run gen & npm run clean & tsc"
   },
   "devDependencies": {
     "@types/chai": "^4.3.3",
+    "@types/deep-equal-in-any-order": "^1.0.1",
     "@types/mocha": "^9.1.1",
     "@types/node": "^16.11.12",
     "chai": "^4.3.6",
+    "deep-equal-in-any-order": "^2.0.0",
     "mocha": "^10.0.0",
     "prettier": "^2.7.1",
     "prettier-plugin-organize-imports": "^3.1.1",

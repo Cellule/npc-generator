@@ -112,8 +112,16 @@ export function getNpcOptionsValues(): NpcGenerateOptionsValues {
   };
   const professions = getTableReferenceOptions("profession").map(({ name, table }) => ({
     name,
-    professionCategories: professionCategories[table],
+    professionCategories: professionCategories[table]!,
   }));
+
+  if (process.env.NODE_ENV === "test") {
+    for (const prof of professions) {
+      if (!prof.professionCategories) {
+        throw new Error(`Missing profession category "${prof.name}"`);
+      }
+    }
+  }
 
   return {
     races,
