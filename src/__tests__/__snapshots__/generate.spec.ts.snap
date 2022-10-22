@@ -80,6 +80,444 @@ exports[`generate returns expected npc options: npc-options 1`] = `
       "value": 1,
     },
   ],
+  "occupations": [
+    {
+      "classes": [
+        {
+          "name": "Artificier",
+          "value": 0,
+        },
+        {
+          "name": "Barbarian",
+          "value": 1,
+        },
+        {
+          "name": "Bard",
+          "value": 2,
+        },
+        {
+          "name": "Cleric",
+          "value": 3,
+        },
+        {
+          "name": "Druid",
+          "value": 4,
+        },
+        {
+          "name": "Fighter",
+          "value": 5,
+        },
+        {
+          "name": "Monk",
+          "value": 6,
+        },
+        {
+          "name": "Mystic",
+          "value": 7,
+        },
+        {
+          "name": "Paladin",
+          "value": 8,
+        },
+        {
+          "name": "Ranger",
+          "value": 9,
+        },
+        {
+          "name": "Rogue",
+          "value": 10,
+        },
+        {
+          "name": "Sorcerer",
+          "value": 11,
+        },
+        {
+          "name": "Warlock",
+          "value": 12,
+        },
+        {
+          "name": "Wizard",
+          "value": 13,
+        },
+      ],
+      "name": "Class",
+      "professions": undefined,
+      "value": 0,
+    },
+    {
+      "classes": undefined,
+      "name": "Profession",
+      "professions": [
+        {
+          "name": "Learned",
+          "professionCategories": [
+            {
+              "name": "Astrologer",
+              "value": 0,
+            },
+            {
+              "name": "Cartographer",
+              "value": 1,
+            },
+            {
+              "name": "Historian",
+              "value": 2,
+            },
+            {
+              "name": "Poet",
+              "value": 3,
+            },
+            {
+              "name": "Philosopher",
+              "value": 4,
+            },
+            {
+              "name": "Hermit",
+              "value": 5,
+            },
+            {
+              "name": "Wandering Pilgrim",
+              "value": 6,
+            },
+            {
+              "name": "Barber",
+              "value": 7,
+            },
+            {
+              "name": "Doctor",
+              "value": 8,
+            },
+            {
+              "name": "Medic",
+              "value": 9,
+            },
+            {
+              "name": "Barrister",
+              "value": 10,
+            },
+            {
+              "name": "Herald",
+              "value": 11,
+            },
+            {
+              "name": "Scribe",
+              "value": 12,
+            },
+            {
+              "name": "Acolyte",
+              "value": 13,
+            },
+            {
+              "name": "Neophyte",
+              "value": 14,
+            },
+          ],
+          "value": 0,
+        },
+        {
+          "name": "Lesser Nobility",
+          "professionCategories": [
+            {
+              "name": "Explorer",
+              "value": 0,
+            },
+            {
+              "name": "Diplomat",
+              "value": 1,
+            },
+            {
+              "name": "Knight",
+              "value": 2,
+            },
+            {
+              "name": "Minister",
+              "value": 3,
+            },
+            {
+              "name": "Page",
+              "value": 4,
+            },
+            {
+              "name": "Squire",
+              "value": 5,
+            },
+          ],
+          "value": 1,
+        },
+        {
+          "name": "Professional",
+          "professionCategories": [
+            {
+              "name": "Armorer",
+              "value": 0,
+            },
+            {
+              "name": "Painter",
+              "value": 1,
+            },
+            {
+              "name": "Baker",
+              "value": 2,
+            },
+            {
+              "name": "Banker",
+              "value": 3,
+            },
+            {
+              "name": "Blacksmith",
+              "value": 4,
+            },
+            {
+              "name": "Bowyer",
+              "value": 5,
+            },
+            {
+              "name": "Brewer",
+              "value": 6,
+            },
+            {
+              "name": "Butcher",
+              "value": 7,
+            },
+            {
+              "name": "Carpenter",
+              "value": 8,
+            },
+            {
+              "name": "Clothier",
+              "value": 9,
+            },
+            {
+              "name": "Cook",
+              "value": 10,
+            },
+            {
+              "name": "Furrier",
+              "value": 11,
+            },
+            {
+              "name": "Goldsmith",
+              "value": 12,
+            },
+            {
+              "name": "Innkeeper",
+              "value": 13,
+            },
+            {
+              "name": "Jeweler",
+              "value": 14,
+            },
+            {
+              "name": "Leatherworker",
+              "value": 15,
+            },
+            {
+              "name": "Locksmith",
+              "value": 16,
+            },
+            {
+              "name": "Mason",
+              "value": 17,
+            },
+            {
+              "name": "Merchant",
+              "value": 18,
+            },
+            {
+              "name": "Musician",
+              "value": 19,
+            },
+            {
+              "name": "Tinker",
+              "value": 20,
+            },
+            {
+              "name": "Torturer",
+              "value": 21,
+            },
+            {
+              "name": "Trader",
+              "value": 22,
+            },
+            {
+              "name": "Weaver",
+              "value": 23,
+            },
+          ],
+          "value": 2,
+        },
+        {
+          "name": "Working Class",
+          "professionCategories": [
+            {
+              "name": "Boat",
+              "value": 0,
+            },
+            {
+              "name": "Coach",
+              "value": 1,
+            },
+            {
+              "name": "Farmer",
+              "value": 2,
+            },
+            {
+              "name": "Fisher",
+              "value": 3,
+            },
+            {
+              "name": "Gravedigger",
+              "value": 4,
+            },
+            {
+              "name": "Sheppard",
+              "value": 5,
+            },
+            {
+              "name": "Trapper",
+              "value": 6,
+            },
+            {
+              "name": "Messenger",
+              "value": 7,
+            },
+            {
+              "name": "Miller",
+              "value": 8,
+            },
+            {
+              "name": "Miner",
+              "value": 9,
+            },
+            {
+              "name": "Peddler",
+              "value": 10,
+            },
+            {
+              "name": "Ratcatcher",
+              "value": 11,
+            },
+            {
+              "name": "Sailor",
+              "value": 12,
+            },
+          ],
+          "value": 3,
+        },
+        {
+          "name": "Martial",
+          "professionCategories": [
+            {
+              "name": "Bodyguard",
+              "value": 0,
+            },
+            {
+              "name": "Bounty Hunter",
+              "value": 1,
+            },
+            {
+              "name": "Forester",
+              "value": 2,
+            },
+            {
+              "name": "Gladiator",
+              "value": 3,
+            },
+            {
+              "name": "Jailer",
+              "value": 4,
+            },
+            {
+              "name": "Soldier",
+              "value": 5,
+            },
+          ],
+          "value": 4,
+        },
+        {
+          "name": "Underclass",
+          "professionCategories": [
+            {
+              "name": "Bandit",
+              "value": 0,
+            },
+            {
+              "name": "Beggar",
+              "value": 1,
+            },
+            {
+              "name": "Fence",
+              "value": 2,
+            },
+            {
+              "name": "Pickpocket",
+              "value": 3,
+            },
+            {
+              "name": "Procurer",
+              "value": 4,
+            },
+            {
+              "name": "Prostitute",
+              "value": 5,
+            },
+            {
+              "name": "Slaver",
+              "value": 6,
+            },
+            {
+              "name": "Smuggler",
+              "value": 7,
+            },
+          ],
+          "value": 5,
+        },
+        {
+          "name": "Entertainer",
+          "professionCategories": [
+            {
+              "name": "Acrobat",
+              "value": 0,
+            },
+            {
+              "name": "Actor",
+              "value": 1,
+            },
+            {
+              "name": "Clown",
+              "value": 2,
+            },
+            {
+              "name": "Dancer",
+              "value": 3,
+            },
+            {
+              "name": "Fortune-Teller",
+              "value": 4,
+            },
+            {
+              "name": "Juggler",
+              "value": 5,
+            },
+            {
+              "name": "Prestidigitator",
+              "value": 6,
+            },
+            {
+              "name": "Funambulist",
+              "value": 7,
+            },
+            {
+              "name": "Storyteller",
+              "value": 8,
+            },
+          ],
+          "value": 6,
+        },
+      ],
+      "value": 1,
+    },
+  ],
   "plothooks": [
     {
       "name": "Classic",

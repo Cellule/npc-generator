@@ -10,20 +10,28 @@ export interface NpcGenerateOptions {
   gender?: number | null;
 }
 
-type GenerateOptionValueSimple = Array<{ name: string, value: number }>;
+type GenerateOptionValueSimple = Array<{ name: string; value: number }>;
+type ProfessionOptionValues = Array<{
+  name: string;
+  value: number;
+  professionCategories: GenerateOptionValueSimple;
+}>;
+
 export interface NpcGenerateOptionsValues {
   alignments: GenerateOptionValueSimple;
   classes: GenerateOptionValueSimple;
   genders: GenerateOptionValueSimple;
   plothooks: GenerateOptionValueSimple;
-  professions: Array<{
+  occupations: Array<{
     name: string;
-    value: number
-    professionCategories: GenerateOptionValueSimple;
+    value: number;
+    classes?: GenerateOptionValueSimple;
+    professions?: ProfessionOptionValues;
   }>;
+  professions: ProfessionOptionValues;
   races: Array<{
     name: string;
-    value: number
+    value: number;
     subraces: GenerateOptionValueSimple | undefined;
   }>;
 }
