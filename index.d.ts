@@ -93,4 +93,5 @@ export interface NpcAbilities {
 
 export function generate(options?: { npcOptions?: NpcGenerateOptions }): NpcGenerateResult;
 export function getNpcOptionsValues(): NpcGenerateOptionsValues;
-export function printDebugGen(debugNode: DebugNode | undefined): void;
+export function debugNodeToString(debugNode: DebugNode): string;
+export function debugNodeToString(debugNode: DebugNode | undefined): string | undefined;

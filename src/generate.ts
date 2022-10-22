@@ -115,13 +115,14 @@ export function getNpcOptionsValues(): NpcGenerateOptionsValues {
     professionCategories: professionCategories[table]!,
   }));
 
-  if (process.env.NODE_ENV === "test") {
-    for (const prof of professions) {
-      if (!prof.professionCategories) {
-        throw new Error(`Missing profession category "${prof.name}"`);
-      }
-    }
-  }
+  // This should be a test instead
+  // if (process.env.NODE_ENV === "test") {
+  //   for (const prof of professions) {
+  //     if (!prof.professionCategories) {
+  //       throw new Error(`Missing profession category "${prof.name}"`);
+  //     }
+  //   }
+  // }
 
   return {
     races,

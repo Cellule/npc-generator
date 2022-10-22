@@ -15,7 +15,9 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "types": ["jest"],
+    "lib": ["es2022"]
   },
   "include": ["src"],
   "exclude": ["src/**/*.spec.ts"]

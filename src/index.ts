@@ -1,2 +1,2 @@
 export { generate, getNpcOptionsValues } from "./generate";
-export { printDebugGen } from "./utils";
+export { debugNodeToString } from "./utils";

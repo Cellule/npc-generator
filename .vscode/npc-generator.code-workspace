@@ -5,6 +5,18 @@
     }
   ],
   "settings": {
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "jestrunner.runOptions": ["--config", "jest.config.js"],
+    "jestrunner.debugOptions": {
+      "env": {
+        "JEST_TIMEOUT": "999999"
+      },
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true,
+      "sourceMaps": true,
+      // "runtimeArgs": ["--preserve-symlinks", "--preserve-symlinks-main"],
+      "skipFiles": ["${workspaceFolder}/node_modules/**/*", "<node_internals>/**/*"]
+    }
   }
 }

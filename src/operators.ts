@@ -221,7 +221,11 @@ export const operators: {
         const t = getTable(tablename);
         function chooseOption(index: number) {
           if (index >>> 0 >= t.options.length) {
-            console.warn("Index [%d] for table [%s]", index, tablename);
+            // @ts-expect-error
+            const _console = console;
+            if (typeof _console !== "undefined") {
+              _console.warn?.("Index [%d] for table [%s]", index, tablename);
+            }
             return chooseRandomWithWeight(t.options, t.w);
           }
           /*if(__DEV__) {
