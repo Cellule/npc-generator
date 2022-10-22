@@ -10,7 +10,7 @@ export interface NpcGenerateOptions {
   gender?: number | null;
 }
 
-type GenerateOptionValueSimple = Array<{ name: string }>;
+type GenerateOptionValueSimple = Array<{ name: string, value: number }>;
 export interface NpcGenerateOptionsValues {
   alignments: GenerateOptionValueSimple;
   classes: GenerateOptionValueSimple;
@@ -18,10 +18,12 @@ export interface NpcGenerateOptionsValues {
   plothooks: GenerateOptionValueSimple;
   professions: Array<{
     name: string;
+    value: number
     professionCategories: GenerateOptionValueSimple;
   }>;
   races: Array<{
     name: string;
+    value: number
     subraces: GenerateOptionValueSimple | undefined;
   }>;
 }

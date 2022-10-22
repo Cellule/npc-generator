@@ -23,7 +23,7 @@ export function debugNodeToString(debugNode: DebugNode | undefined): string | un
   const lines: string[] = [];
   const indent = () => " ".repeat(depth);
   const processNode = (node: DebugNode | string) => {
-    if (typeof node === "string") {
+  if (typeof node === "string") {
       lines.push(indent() + `-> ${node}`);
     } else {
       lines.push(indent() + `-> ${node.o}`);

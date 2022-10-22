@@ -99,8 +99,9 @@ export function getNpcOptionsValues(): NpcGenerateOptionsValues {
     gnome: getNamedTableOptions("racegnome"),
     halfling: getNamedTableOptions("racehalfling"),
   };
-  const races = getTableReferenceOptions("race").map(({ name, table }) => ({
+  const races = getTableReferenceOptions("race").map(({ name, table, value }) => ({
     name,
+    value,
     subraces: subraces[table],
   }));
 
@@ -118,19 +119,11 @@ export function getNpcOptionsValues(): NpcGenerateOptionsValues {
     underclass: getNamedTableOptions("underclass"),
     entertainer: getNamedTableOptions("entertainer"),
   };
-  const professions = getTableReferenceOptions("profession").map(({ name, table }) => ({
+  const professions = getTableReferenceOptions("profession").map(({ name, table, value }) => ({
     name,
+    value,
     professionCategories: professionCategories[table]!,
   }));
-
-  // This should be a test instead
-  // if (process.env.NODE_ENV === "test") {
-  //   for (const prof of professions) {
-  //     if (!prof.professionCategories) {
-  //       throw new Error(`Missing profession category "${prof.name}"`);
-  //     }
-  //   }
-  // }
 
   return {
     races,

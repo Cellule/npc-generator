@@ -58,10 +58,10 @@ interface TableReferenceOption extends NamedOption {
 
 export function getNamedTableOptions(tableName: string): GenerateOptionValueSimple {
   const options = getTable(tableName).options as NamedOption[];
-  return options.filter((o) => !!o.name).map((o) => ({ name: o.name! }));
+  return options.map((o, i) => ({ name: o.name!, value: i })).filter((o) => !!o.name);
 }
 
-export function getTableReferenceOptions(tableName: string): { name: string; table: string }[] {
+export function getTableReferenceOptions(tableName: string): { name: string; table: string; value: number }[] {
   const options = getTable(tableName).options as TableReferenceOption[];
   for (const opt of options) {
     if (!("table" in opt)) {
@@ -69,11 +69,12 @@ export function getTableReferenceOptions(tableName: string): { name: string; tab
     }
   }
   return options
-    .filter((o) => !!o.name && o.table)
-    .map((o) => ({
+    .map((o, i) => ({
       name: o.name!,
+      value: i,
       table: o.table!,
-    }));
+    }))
+    .filter((o) => !!o.name);
 }
 
 export function getTableWeight(tableName: string) {
