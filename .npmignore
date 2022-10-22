@@ -1,6 +1,8 @@
 .vscode/
+.github/
 scripts/
 src/
 tsconfig.json
-mocha-setup.js
+tsconfig.test.json
+jest.*.js
 .prettierrc.js
