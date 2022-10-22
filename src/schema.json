@@ -54,12 +54,12 @@
       "description": "{$hook}"
     },
     "abilities": {
-      "str": "{%str}",
-      "dex": "{%dex}",
-      "con": "{%con}",
-      "int": "{%int}",
-      "wis": "{%wis}",
-      "cha": "{%cha}"
+      "charisma": "{%cha}",
+      "constitution": "{%con}",
+      "dexterity": "{%dex}",
+      "intelligence": "{%int}",
+      "strength": "{%str}",
+      "wisdom": "{%wis}"
     }
   }
 }

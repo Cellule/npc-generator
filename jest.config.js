@@ -5,7 +5,7 @@ const path = require("path");
 module.exports = {
   roots: ["<rootDir>/src"],
   transform: {
-    "^.+\\.ts$": ["ts-jest", { tsconfig: "tsconfig.json", isolatedModules: true }],
+    "^.+\\.ts$": ["ts-jest", { tsconfig: "tsconfig.test.json", isolatedModules: true }],
   },
   // setupFiles,
   setupFilesAfterEnv: [path.join(__dirname, "jest.setupAfterEnv.js")],

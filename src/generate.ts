@@ -2,7 +2,7 @@ import type { DebugNode, GenerateOptionValueSimple, Npc, NpcGenerateOptions, Npc
 import { getGroups } from "./groups";
 import schema from "./schema.json";
 import { getNamedTableOptions, getTableReferenceOptions } from "./tables";
-import { Group, Operator, SchemaDescriptor, SchemaElement, SchemaResult, WeightedValue } from "./types.js";
+import { Group, Primitives, SchemaDescriptor, SchemaElement, SchemaResult, WeightedValue } from "./types.js";
 import { chooseRandomWithWeight } from "./utils";
 
 function numberOrNull(v: any) {
@@ -24,32 +24,40 @@ export function generate({ npcOptions }: { npcOptions?: NpcGenerateOptions } = {
   const context = { vars: {} };
   let debugNode: DebugNode = { o: "root", childs: [] };
   function processGroups(groups: Group[]) {
-    let result = "";
+    let result: Primitives | undefined;
+    const concatResult = (r: Primitives) => {
+      if (typeof result === "undefined") {
+        result = r;
+      } else {
+        result = String(result) + r;
+      }
+    };
+
     for (const instruction of groups) {
       if (typeof instruction === "string") {
         debugNode.childs.push(instruction);
-        result += String(instruction);
+        concatResult(instruction);
       } else {
         const oldNode = debugNode;
         const node = { o: instruction.original, childs: [] };
         debugNode.childs.push(node);
         debugNode = node;
         if (typeof instruction === "function") {
-          const insRes = (instruction as Operator)(context, options);
+          const insRes = instruction(context, options);
           if (insRes !== undefined) {
             if (Array.isArray(insRes)) {
-              result += String(processGroups(insRes));
+              concatResult(processGroups(insRes));
             } else {
-              result += String(insRes);
+              concatResult(insRes);
             }
           }
         } else if (Array.isArray(instruction)) {
-          result += String(processGroups(instruction));
+          concatResult(processGroups(instruction));
         }
         debugNode = oldNode;
       }
     }
-    return result;
+    return result ?? "";
   }
 
   function chooseFromArray(arr: WeightedValue[]): string {
@@ -61,7 +69,7 @@ export function generate({ npcOptions }: { npcOptions?: NpcGenerateOptions } = {
 
   function processSchema(schemaElement: SchemaDescriptor): SchemaResult;
   function processSchema(schemaElement: any): string;
-  function processSchema(schemaElement: SchemaElement | SchemaDescriptor): SchemaResult | string {
+  function processSchema(schemaElement: SchemaElement | SchemaDescriptor): SchemaResult | Primitives {
     if (typeof schemaElement === "string") {
       return processGroups(getGroups(schemaElement));
     } else if (Array.isArray(schemaElement)) {

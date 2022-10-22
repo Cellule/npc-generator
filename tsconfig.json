@@ -16,7 +16,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noFallthroughCasesInSwitch": true,
-    "types": ["jest"],
+    "types": [],
     "lib": ["es2022"]
   },
   "include": ["src"],

@@ -1,4 +1,4 @@
-import { generate, getNpcOptionsValues } from "../..";
+import { generate, getNpcOptionsValues } from "../generate";
 
 describe("generate", () => {
   it("generates a random npm", () => {
@@ -6,8 +6,16 @@ describe("generate", () => {
 
     const { abilities, alignment, description, hook, physical, pquirks, ptraits, relationship, religion } = npc;
     // check abilities are positive numbers
-    // expect(abilities).toBe.an("object");
-    // expect(abilities).to.have.all.keys("str", "dex", "con", "int", "wis", "cha");
+    expect(abilities).toEqual(
+      expect.objectContaining({
+        charisma: expect.any(Number),
+        constitution: expect.any(Number),
+        dexterity: expect.any(Number),
+        intelligence: expect.any(Number),
+        strength: expect.any(Number),
+        wisdom: expect.any(Number),
+      }),
+    );
   });
 
   it("returns expected npc options", () => {

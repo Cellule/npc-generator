@@ -15,7 +15,6 @@
       "internalConsoleOptions": "neverOpen",
       "disableOptimisticBPs": true,
       "sourceMaps": true,
-      // "runtimeArgs": ["--preserve-symlinks", "--preserve-symlinks-main"],
       "skipFiles": ["${workspaceFolder}/node_modules/**/*", "<node_internals>/**/*"]
     }
   }

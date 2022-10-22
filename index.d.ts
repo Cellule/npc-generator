@@ -83,12 +83,12 @@ export interface Npc {
 }
 
 export interface NpcAbilities {
-  str: number;
-  dex: number;
-  con: number;
-  int: number;
-  wis: number;
-  cha: number;
+  charisma: number;
+  constitution: number;
+  dexterity: number;
+  intelligence: number;
+  strength: number;
+  wisdom: number;
 }
 
 export function generate(options?: { npcOptions?: NpcGenerateOptions }): NpcGenerateResult;
