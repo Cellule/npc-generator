@@ -173,7 +173,6 @@ import medCon from "./tables/medCon.json"
 import medDex from "./tables/medDex.json"
 import medInt from "./tables/medInt.json"
 import medStr from "./tables/medStr.json"
-import medusa from "./tables/medusa.json"
 import medusahair from "./tables/medusahair.json"
 import medusaname from "./tables/medusaname.json"
 import medusaveil from "./tables/medusaveil.json"
@@ -448,7 +447,6 @@ export default {
   medDex,
   medInt,
   medStr,
-  medusa,
   medusahair,
   medusaname,
   medusaveil,
