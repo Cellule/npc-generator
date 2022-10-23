@@ -87,7 +87,10 @@
     "v": "{$hook=$majPro}{$hook+gives the PCs a magical }{$precious=}{precious}{$hook+$precious}{$hook+. Turns out }{$hook+$minPro}{$hook+had stolen it from an imp who is hellbent on recovering it.}"
   },
   { "w": 2, "v": "{$hook=$majPro}{$hook+is a time traveller from a distant past.}" },
-  { "w": 2, "v": "{$hook=$majPro}{$hook+is a time traveller from a distant past. }{$hook+$majPro}{$hook+is obsessed with finding her descendants.}" },
+  {
+    "w": 2,
+    "v": "{$hook=$majPro}{$hook+is a time traveller from a distant past. }{$hook+$majPro}{$hook+is obsessed with finding }{$hook+$minPoss}{$hook+descendants.}"
+  },
   {
     "w": 2,
     "v": "{$hook=$majPro}{$hook+is a time traveller from a distant past. }{$hook+$majPro}{$hook+is obsessed with finding the treasure }{$hook+$minPro}{$hook+buried thousands of years ago.}"
