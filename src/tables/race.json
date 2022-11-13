@@ -87,7 +87,7 @@
     "w": 1,
     "name": "Medusa",
     "table": "medusa",
-    "v": "{$race=medusa}{%dex+3}{%con+2}{%int+1}{%wis+2}{%cha+3}{medusa}{%lawful+2}{lightweight}{goodface}{humangod}{orcskin}{age}{ageBonus}{medusaname}{medusaveil}"
+    "v": "{$race=medusa}{%dex+2}{%con+3}{%int+1}{%wis+1}{%cha+2}{%str+1}{female}{medusahair}{%lawful+2}{lightweight}{goodface}{humangod}{orcskin}{age}{ageBonus}{medusaname}{medusaveil}"
   },
   {
     "w": 3,

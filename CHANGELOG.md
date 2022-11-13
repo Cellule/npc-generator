@@ -1,5 +1,9 @@
 # Changelog
 
+## Pending
+Fix gender attribution in some hooks [#6](https://github.com/Cellule/npc-generator/pull/6)
+Medusas will now be a bit shorter like all other female characters [#6](https://github.com/Cellule/npc-generator/pull/6)
+
 ## 1.0.1 (2022-10-23)
 Add repository to package.json
 
