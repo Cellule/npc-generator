@@ -124,12 +124,12 @@ export function getNpcOptionsValues(): NpcGenerateOptionsValues {
     value,
     professionCategories: professionCategories[table]!,
   }));
-  const occupations = getTableReferenceOptions("occupation").map(({name, table, value}) => ({
+  const occupations = getTableReferenceOptions("occupation").map(({ name, table, value }) => ({
     name,
     value,
     classes: table === "class" ? classes : undefined,
     professions: table === "profession" ? professions : undefined,
-  }))
+  }));
 
   return {
     races,

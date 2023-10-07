@@ -1,4 +1,4 @@
-import { describe, it, expect } from "vitest";
+import { describe, expect, it } from "vitest";
 import { reGroup } from "../groups";
 import { operators } from "../operators";
 import schema from "../schema.json";

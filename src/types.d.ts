@@ -22,7 +22,3 @@ export type SchemaDescriptor = { [name: string]: SchemaElement | SchemaDescripto
 export type SchemaResult = {
   [element: string]: SchemaResult | string;
 };
-
-
-
-

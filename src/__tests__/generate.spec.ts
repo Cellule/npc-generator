@@ -1,6 +1,6 @@
-import { describe, it, expect } from "vitest";
-import { debugNodeToString } from "../utils";
+import { describe, expect, it } from "vitest";
 import { generate, getNpcOptionsValues } from "../generate";
+import { debugNodeToString } from "../utils";
 
 describe("generate", () => {
   it("generates a random npc that respects the schema/type", () => {
