@@ -1,3 +1,4 @@
+import { describe, it, expect } from "vitest";
 import { debugNodeToString } from "../utils";
 import { generate, getNpcOptionsValues } from "../generate";
 
