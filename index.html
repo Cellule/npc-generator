@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Walking Dead NPC Randomizer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Walking Dead NPC Randomizer</h1>
+    <p class="subtitle">Quick, gritty NPCs for tabletop or roleplay — frontend-only.</p>
+  </header>
+  <main>
+    <div class="controls">
+      <button id="generate">Generate NPC</button>
+      <button id="copy">Copy</button>
+      <button id="download">Download JSON</button>
+    </div>
+
+    <section id="npc-card" class="card">
+      <h2 id="npc-name">—</h2>
+      <ul id="npc-list"></ul>
+      <p id="npc-backstory" class="backstory"></p>
+    </section>
+
+    <footer>
+      <small>Export or copy generated NPCs. No data leaves your browser.</small>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
