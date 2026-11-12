@@ -19,7 +19,7 @@ jobs:
       - name: Setup tools with mise
         uses: jdx/mise-action@b44d12e7d0d8ee7461bb893e1b1993500433185b # jdx/mise-action v5.2.7
 
-      - run: npm install
+      - run: npm install --frozen-lockfile
       - run: npm run build
       - run: npm test
       - run: npm run lint
