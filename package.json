@@ -35,8 +35,8 @@
   },
   "scripts": {
     "prepublishOnly": "npm run build && npm test",
-    "test": "vitest run",
-    "test:watch": "vitest",
+    "test": "vitest run --dir src",
+    "test:watch": "npm run test -- --watch",
     "gen": "node scripts/gen.js",
     "clean": "rimraf dist .cache",
     "build": "npm run gen && npm run clean && tsc --build",
