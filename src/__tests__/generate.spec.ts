@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { generate, getNpcOptionsValues } from "../generate";
-import { debugNodeToString } from "../utils";
+
+import { generate, getNpcOptionsValues } from "../generate.js";
+import { debugNodeToString } from "../utils.js";
 
 describe("generate", () => {
   it("generates a random npc that respects the schema/type", () => {
@@ -183,7 +184,7 @@ describe("generate", () => {
   });
 
   it.each(options.plothooks)("always generates expected plothook $name", (plothook) => {
-    const { npc, debugNode } = generate({
+    const { debugNode } = generate({
       npcOptions: {
         plothook: plothook.value,
       },

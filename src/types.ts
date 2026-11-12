@@ -1,3 +1,4 @@
+// Public API types
 export type DebugNode = { o?: string; childs: (DebugNode | string)[] };
 export interface NpcGenerateOptions {
   race?: number | null;
@@ -10,8 +11,8 @@ export interface NpcGenerateOptions {
   gender?: number | null;
 }
 
-type GenerateOptionValueSimple = Array<{ name: string; value: number }>;
-type ProfessionOptionValues = Array<{
+export type GenerateOptionValueSimple = Array<{ name: string; value: number }>;
+export type ProfessionOptionValues = Array<{
   name: string;
   value: number;
   professionCategories: GenerateOptionValueSimple;
@@ -101,7 +102,26 @@ export interface NpcAbilities {
   wisdom: number;
 }
 
-export function generate(options?: { npcOptions?: NpcGenerateOptions }): NpcGenerateResult;
-export function getNpcOptionsValues(): NpcGenerateOptionsValues;
-export function debugNodeToString(debugNode: DebugNode): string;
-export function debugNodeToString(debugNode: DebugNode | undefined): string | undefined;
+// Internal types
+export type Primitives = string | number;
+export interface WeightedValue {
+  w: number;
+  v: string;
+}
+
+export interface Option {
+  w: number;
+  v: Group[];
+  original: string;
+}
+
+export type Operator = ((context: { vars: { [key: string]: Primitives } }, options: NpcGenerateOptions) => Primitives | Group[] | void) & {
+  original?: string;
+};
+export type Group = Operator | string;
+
+export type SchemaElement = string | WeightedValue[];
+export type SchemaDescriptor = { [name: string]: SchemaElement | SchemaDescriptor };
+export type SchemaResult = {
+  [element: string]: SchemaResult | string;
+};

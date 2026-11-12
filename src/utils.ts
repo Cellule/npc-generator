@@ -1,4 +1,4 @@
-import type { DebugNode } from "../index.d";
+import type { DebugNode } from "./types.js";
 
 export function chooseRandomWithWeight<T>(
   arr: {

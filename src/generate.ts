@@ -1,9 +1,21 @@
-import type { DebugNode, GenerateOptionValueSimple, Npc, NpcGenerateOptions, NpcGenerateOptionsValues, NpcGenerateResult } from "../index.d";
-import { getGroups } from "./groups";
-import schema from "./schema.json";
-import { getNamedTableOptions, getTableReferenceOptions } from "./tables";
-import { Group, Primitives, SchemaDescriptor, SchemaElement, SchemaResult, WeightedValue } from "./types.js";
-import { chooseRandomWithWeight } from "./utils";
+import { getGroups } from "./groups.js";
+import schema from "./schema.json" with { type: "json" };
+import { getNamedTableOptions, getTableReferenceOptions } from "./tables.js";
+import type {
+  DebugNode,
+  GenerateOptionValueSimple,
+  Group,
+  Npc,
+  NpcGenerateOptions,
+  NpcGenerateOptionsValues,
+  NpcGenerateResult,
+  Primitives,
+  SchemaDescriptor,
+  SchemaElement,
+  SchemaResult,
+  WeightedValue,
+} from "./types.js";
+import { chooseRandomWithWeight } from "./utils.js";
 
 function numberOrNull(v: any) {
   return typeof v === "number" ? v | 0 : null;

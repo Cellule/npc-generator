@@ -1,8 +1,0 @@
-.vscode/
-.github/
-scripts/
-src/
-tsconfig.json
-tsconfig.test.json
-jest.*.js
-.prettierrc.js
