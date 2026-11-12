@@ -1,12 +1,8 @@
 {
-  "extends": "./tsconfig.json",
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "types": ["node"],
     "outDir": ".cache/dist-tests",
-    "tsBuildInfoFile": ".cache/tsconfig.tests.tsbuildinfo",
-    "resolveJsonModule": true,
-    "composite": true
+    "tsBuildInfoFile": ".cache/tsconfig.tests.tsbuildinfo"
   },
-  "include": ["src", "src/**/*.json"],
   "exclude": []
 }

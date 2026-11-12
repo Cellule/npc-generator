@@ -38,7 +38,7 @@
     "test": "vitest run --dir src",
     "test:watch": "npm run test -- --watch",
     "gen": "node scripts/gen.js",
-    "clean": "rimraf dist .cache",
+    "clean": "tsc --build --clean",
     "build": "npm run gen && npm run clean && tsc --build",
     "lint": "oxlint src --deny-warnings --report-unused-disable-directives",
     "lint:fix": "oxlint src --fix --fix-suggestions",
