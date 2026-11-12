@@ -1,9 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { reGroup } from "../groups";
-import { operators } from "../operators";
-import schema from "../schema.json";
-import { AnalysisNode, Definition, StaticAnalysis, Use } from "../staticAnalysis";
-import { getTable, getTableNames } from "../tables";
+
+import { reGroup } from "../groups.js";
+import { operators } from "../operators.js";
+import schema from "../schema.json" with { type: "json" };
+import { AnalysisNode, Definition, StaticAnalysis, Use } from "../staticAnalysis.js";
+import { getTable, getTableNames } from "../tables.js";
 
 describe("tables", () => {
   it("parses tables", () => {

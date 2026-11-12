@@ -1,7 +1,6 @@
-import { GenerateOptionValueSimple } from "../index.d";
-import { getGroups } from "./groups";
-import data from "./tables.data.gen";
-import { Option } from "./types";
+import { getGroups } from "./groups.js";
+import data from "./tables.data.gen.js";
+import type { GenerateOptionValueSimple, Option } from "./types.js";
 
 interface TableEntry {
   w: number;

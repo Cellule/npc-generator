@@ -1,5 +1,5 @@
-import { operators } from "./operators";
-import { Group } from "./types";
+import { operators } from "./operators.js";
+import type { Group } from "./types.js";
 
 function mapGroup(g: string): Group {
   //todo: replace escaped \{ and \}

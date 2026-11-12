@@ -1,24 +1,30 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "CommonJS",
-    "moduleResolution": "node",
+    "target": "ESNext",
+    "lib": ["ESNext"],
+
+    /* Emit a native ESM package for Node.js */
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "rootDir": "src",
     "outDir": "dist",
+    "tsBuildInfoFile": ".cache/tsconfig.tsbuildinfo",
+    "declaration": true,
     "sourceMap": false,
 
-    "allowJs": true,
-    "skipLibCheck": false,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
+    /* Linting */
     "strict": true,
-    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
     "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noFallthroughCasesInSwitch": true,
-    "types": [],
-    "lib": ["es2022"]
+    "esModuleInterop": true,
+    "types": ["node"]
   },
   "include": ["src"],
-  "exclude": ["src/**/*.spec.ts"]
+  "exclude": ["src/**/*.spec.ts"],
+  "references": [{ "path": "./tsconfig.test.json" }]
 }

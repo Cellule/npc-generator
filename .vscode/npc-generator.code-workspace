@@ -1,21 +1,21 @@
 {
   "folders": [
     {
-      "path": ".."
-    }
+      "path": "..",
+    },
   ],
   "settings": {
     "editor.formatOnSave": true,
     "jestrunner.runOptions": ["--config", "jest.config.js"],
     "jestrunner.debugOptions": {
       "env": {
-        "JEST_TIMEOUT": "999999"
+        "JEST_TIMEOUT": "999999",
       },
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
       "disableOptimisticBPs": true,
       "sourceMaps": true,
-      "skipFiles": ["${workspaceFolder}/node_modules/**/*", "<node_internals>/**/*"]
-    }
-  }
+      "skipFiles": ["${workspaceFolder}/node_modules/**/*", "<node_internals>/**/*"],
+    },
+  },
 }

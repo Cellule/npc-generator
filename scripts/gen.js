@@ -1,8 +1,11 @@
-const fs = require("fs");
-const path = require("path");
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const tables = fs
-  .readdirSync(path.join(__dirname, "../src/tables"))
+  .readdirSync(path.join(dirname, "../src/tables"))
   .filter((file) => file.endsWith(".json"))
   .map((table) => {
     const name = table.replace(".json", "");
@@ -13,9 +16,10 @@ const tables = fs
       file: table,
       exported: name,
     };
-  });
+  })
+  .sort((a, b) => a.exported.localeCompare(b.exported, undefined, { sensitivity: "base" }));
 
-const tableImports = tables.map(({ alias, file }) => `import ${alias} from "./tables/${file}"`).join("\n");
+const tableImports = tables.map(({ alias, file }) => `import ${alias} from "./tables/${file}" with { type: "json" }`).join("\n");
 const tableExports = tables.map(({ alias, exported }) => (alias === exported ? exported : `${exported}: ${alias}`)).join(",\n  ");
 
 const content = `// This file is generated automatically. Do not edit it manually.
@@ -26,4 +30,4 @@ export default {
 };
 `;
 
-fs.writeFileSync(path.join(__dirname, "../src/tables.data.gen.ts"), content);
+fs.writeFileSync(path.join(dirname, "../src/tables.data.gen.ts"), content);

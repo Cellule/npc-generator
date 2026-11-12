@@ -1,7 +1,7 @@
-import * as s from "./staticAnalysis";
-import { getTable } from "./tables";
-import { Operator } from "./types";
-import { chooseRandomWithWeight } from "./utils";
+import * as s from "./staticAnalysis.js";
+import { getTable } from "./tables.js";
+import type { Operator } from "./types.js";
+import { chooseRandomWithWeight } from "./utils.js";
 
 function isNumber(n: any): n is number {
   return typeof n === "number";
@@ -210,22 +210,18 @@ export const operators: {
         return "\n";
       };
     },
-    analysis: (m) => ({}),
+    analysis: () => ({}),
   },
   // {table}
   {
     regex: /^{(.*)}/,
     makeOperator(m) {
       const tablename = m[1];
-      return function operator(context, options) {
+      return function operator(_context, options) {
         const t = getTable(tablename);
         function chooseOption(index: number) {
           if (index >>> 0 >= t.options.length) {
-            // @ts-expect-error
-            const _console = console;
-            if (typeof _console !== "undefined") {
-              _console.warn?.("Index [%d] for table [%s]", index, tablename);
-            }
+            console.warn?.("Index [%d] for table [%s]", index, tablename);
             return chooseRandomWithWeight(t.options, t.w);
           }
           /*if(__DEV__) {

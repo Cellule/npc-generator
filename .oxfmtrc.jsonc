@@ -1,0 +1,9 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "printWidth": 160,
+  "trailingComma": "all",
+  // Sort imports, replacing prettier-plugin-organize-imports.
+  "sortImports": true,
+  // Never touch generated files.
+  "ignorePatterns": ["*.gen.*"],
+}
