@@ -3,10 +3,12 @@
 ## 2.0.0 (2026-11-12)
 
 **Breaking Changes**
+
 - Dropped support for Node.js versions below 26
 - Converted to ESM (ECMAScript Module) format
 
 **Technical Changes**
+
 - Updated TypeScript and simplified build configuration
 - Replaced prettier by oxfmt
 - Added oxlint for linting TypeScript code
